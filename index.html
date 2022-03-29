@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store data in localStorage</title>
+
+    <style>
+        table {
+            width: 50%;
+        }
+        table, td, th {
+            border: 1px solid black;
+            text-transform: capitalize;
+        }
+
+        .input-btn-container {
+            margin-top: 20px;
+        }
+        .input-btn-container input {
+            font-size: 16px;
+            padding: 6px;
+            width: 150px;
+            border: 2px solid blueviolet;
+            border-radius: 8px;
+        }
+        .input-btn-container button {
+            background-color: blueviolet;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Store data in localStorage with plain Javascript</h2>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Balance</th>
+        </tr>
+    </table>
+    <div class="input-btn-container">
+        <input type="text" name="" id="name-field" placeholder="Name">
+        <input type="text" name="" id="income-field" placeholder="Income">
+        <button onclick="getData()">Add Data</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
