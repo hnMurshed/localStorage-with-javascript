@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,33 @@
     <title>Store data in localStorage</title>
 
     <style>
-        table {
-            width: 50%;
+        * {
+            box-sizing: border-box;
         }
-        table, td, th {
+
+        body {
+            background-color: rgba(220, 220, 220, 0.521);
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            background-color: aquamarine;
+            width: 90%;
+            margin: auto;
+            padding: 80px 20px;
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin: auto;
+        }
+
+        table,
+        td,
+        th {
             border: 1px solid black;
             text-transform: capitalize;
         }
@@ -18,36 +42,81 @@
         .input-btn-container {
             margin-top: 20px;
         }
+
         .input-btn-container input {
             font-size: 16px;
             padding: 6px;
-            width: 150px;
+            width: 100%;
             border: 2px solid blueviolet;
             border-radius: 8px;
+            margin: 5px 0;
         }
+
+        .btn-box {
+            text-align: right;
+        }
+
         .input-btn-container button {
             background-color: blueviolet;
             color: white;
+            text-transform: uppercase;
+            font-weight: bold;
             padding: 10px 25px;
+            margin-top: 5px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
         }
+
+        /* responsive */
+        @media screen and (min-width: 576px) {
+            table {
+                width: 70%;
+            }
+
+            .input-btn-container {
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+            }
+
+            .input-btn-container input {
+                width: 200px;
+            }
+
+            .btn-box {
+                text-align: left;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            table {
+                width: 50%;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <h2>Store data in localStorage with plain Javascript</h2>
-    <table id="table">
-        <tr>
-            <th>Name</th>
-            <th>Balance</th>
-        </tr>
-    </table>
-    <div class="input-btn-container">
-        <input type="text" name="" id="name-field" placeholder="Name">
-        <input type="text" name="" id="income-field" placeholder="Income">
-        <button onclick="getData()">Add Data</button>
+
+    <div class="container">
+        <h2>Store data in localStorage with plain Javascript</h2>
+        <table id="table">
+            <tr>
+                <th>Name</th>
+                <th>Balance</th>
+            </tr>
+        </table>
+        <div class="input-btn-container">
+            <input type="text" name="" id="name-field" placeholder="Name">
+            <input type="text" name="" id="income-field" placeholder="Income">
+            <div class="btn-box">
+                <button onclick="getData()">Add Data</button>
+            </div>
+        </div>
     </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
